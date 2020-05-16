@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel = "icon" href = "weather02-512.png">
+    <link rel="stylesheet" href = "styles.css">
+</head>
+<body>
+
+    <div class = "main-content">
+           {{>header}}
+           <p>Use this site to get weather</p>
+
+           <form>
+               <input type = "text" placeholder="Enter your location">
+               <button>Search</button>
+           </form>
+
+             <img  id = "loader" class = "loader" src = "3.gif">
+           <p id ="message-1"></p>
+           <p id ="message-2"></p>
+    </div>
+
+     {{>footer}}
+    <script src = "js/index.js"></script>
+</body>
+</html>
