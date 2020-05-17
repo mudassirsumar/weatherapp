@@ -11,7 +11,9 @@ request ({url, json: true}, (error, response) => {
         callback('Unable to find your location', undefined)
     }
     else {
-        callback(undefined, `Description: ${response.body.current.weather[0].description} The temperature is ${response.body.current.temp}℃. There is ${response.body.current.clouds}% chance of rain`)
+        callback(undefined, `Description: ${response.body.current.weather[0].description} The temperature is ${response.body.current.temp}℃. Feel like is ${response.body.daily[0].feels_like.day}
+        The high today is ${response.body.daily[0].temp.max} with a low of ${response.body.daily[0].temp.min}. 
+        There is ${response.body.current.clouds}% chance of rain`)
     }
 
 })
